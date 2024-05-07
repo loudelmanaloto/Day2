@@ -7,3 +7,7 @@ def index(request):
 def all_venues(request):
     name = "Loudel Manaloto"
     return render(request, 'venues.html', {'name': name})
+
+def upload_file(request, form):
+    #logic checking file format
+    pass
