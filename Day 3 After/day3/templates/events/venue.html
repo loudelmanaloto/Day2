@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Venue Page{% endblock %}
+
+{% block content %} 
+    <div>
+        <span>This is my venue page</span>
+       
+            <h5>{{ object }}</h5>
+            <ul>
+                <li>{{ object.name }}</li>
+                <li>{{ object.web }}</li>
+                <li>{{ object.zip_code }}</li>
+                <li>{{ object.address }}</li>
+                <li>{{ object.phone }}</li>
+            </ul>
+    </div>
+{% endblock %}

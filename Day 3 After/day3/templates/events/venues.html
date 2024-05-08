@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Venue Page{% endblock %}
+
+{% block content %} 
+    <div>
+        <span>This is my venue page</span>
+        {% for venue in object_list %}
+         <a href="{% url 'show-venue' venue.id %}"><h5>{{ venue }}</h5></a>    
+        {% endfor %}
+    </div>
+{% endblock %}
