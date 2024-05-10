@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Attendee Page{% endblock %}
+
+{% block content %} 
+    <h1>This is my Attendee body</h1>
+    <a href="{% url 'edit-venue' object.id %}">Edit</a> 
+   
+    <h5>{{ object }}</h5> 
+    <ul>
+        <li>{{ object.first_name }}</li>
+        <li>{{ object.last_name }}</li>
+        <li>{{ object.email }}</li>
+    </ul> 
+   
+{% endblock %}

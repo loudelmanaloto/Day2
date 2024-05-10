@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Event Page{% endblock %}
+
+{% block content %} 
+    <h1>This is my event body</h1>
+    <a href="{% url 'edit-event' object.id %}">Edit</a> 
+    <h5>{{ object }}</h5> 
+
+    <ul>
+        <li>{{ object.name }}</li>
+        <li>{{ object.event_date }}</li>
+        <li>{{ object.venue }}</li>
+        <li>{{ object.manager }}</li>
+        <li>{{ object.description }}</li>
+        <li>Attendees: </li>
+        {% for item in object.attendees.all %}
+            <span>{{ item }}</span>
+            <br>
+        {% endfor %}
+    </ul> 
+   
+{% endblock %}

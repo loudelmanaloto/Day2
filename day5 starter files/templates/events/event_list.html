@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Events Page{% endblock %}
+
+{% block content %} 
+    <h1>This is my events body</h1>
+     <a class="btn btn-primary" href="{% url 'add-event' %}">Add Event</a>
+    <hr>
+    {% for object in object_list %}
+        <a href="{% url 'show-event' object.id %}"><h5>{{ object }}</h5></a> 
+    {% endfor %}
+{% endblock %}
+

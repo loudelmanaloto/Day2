@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Venue Page{% endblock %}
+
+{% block content %} 
+    <h1>This is my Venue body</h1>
+    <a href="{% url 'edit-venue' object.id %}">Edit</a> 
+   
+    <h5>{{ object }}</h5> 
+    <ul>
+        <li>{{ object.name }}</li>
+        <li>{{ object.address }}</li>
+        <li>{{ object.zip_code }}</li>
+        <li>{{ object.phone }}</li>
+        <li>{{ object.web }}</li>
+        <li>{{ object.email_address }}</li>
+    </ul> 
+   
+{% endblock %}
+

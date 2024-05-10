@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Attendee Page{% endblock %}
+
+{% block content %} 
+    <h1>Delete Event</h1>
+    <p>Are you sure you want to delete the attendee "{{ object }}"</p>
+    <hr>
+   <form method=POST>
+        {% csrf_token %}
+        <button type="submit" class="btn btn-secondary">Confirm Delete</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Members Page{% endblock %}
+
+{% block content %} 
+    <h1>This is my members body</h1>
+    <a class="btn btn-primary" href="{% url 'add-member' %}">Add Attendee</a>
+    <hr>
+    {% for object in object_list %}
+        <a href="{% url 'show-member' object.id %}"><h5>{{ object }}</h5></a>   
+    {% endfor %}
+{% endblock %}
